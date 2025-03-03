@@ -1,2 +1,2 @@
 # cachingExercise
-Caching RIST API creating using Spring boot
+Caching REST API creation using Spring boot
