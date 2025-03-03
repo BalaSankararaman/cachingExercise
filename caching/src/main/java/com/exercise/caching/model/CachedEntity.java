@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +19,7 @@ public class CachedEntity implements Serializable {
 	private static final long serialVersionUID = -2374575604450861648L;
 
 	@Schema(description = "Unique identifier of the entity")
+	@NotBlank(message = "ID cannot be blank")
     private String id;
     
     @Schema(description = "Data content of the entity")
@@ -28,10 +29,10 @@ public class CachedEntity implements Serializable {
     private LocalDateTime cacheAccessedTime;
 
     // All args constructor
-    public CachedEntity(String id, String data, LocalDateTime lastAccessed, boolean isPersisted) {
+    public CachedEntity(String id, String data, LocalDateTime createdAt) {
         this.id = id;
         this.data = data;
-        this.cacheAccessedTime = lastAccessed;
+        this.cacheAccessedTime = createdAt;
     }
 
     // Getters and Setters
@@ -96,3 +97,5 @@ public class CachedEntity implements Serializable {
 
   
 }
+
+

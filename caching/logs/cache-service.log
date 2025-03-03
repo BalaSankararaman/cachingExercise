@@ -1,201 +1,214 @@
-2025-02-27T18:38:39.353-06:00  INFO 24816 --- [restartedMain] c.exercise.caching.CachingApplication    : Starting CachingApplication using Java 21.0.6 with PID 24816 (/Users/vaidy/Downloads/caching/target/classes started by vaidy in /Users/vaidy/Downloads/caching)
-2025-02-27T18:38:39.355-06:00  INFO 24816 --- [restartedMain] c.exercise.caching.CachingApplication    : No active profile set, falling back to 1 default profile: "default"
-2025-02-27T18:38:39.466-06:00  INFO 24816 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-02-27T18:38:39.467-06:00  INFO 24816 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-02-27T18:38:43.361-06:00  INFO 24816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-27T18:38:43.380-06:00  INFO 24816 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-27T18:38:43.381-06:00  INFO 24816 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-02-27T18:38:43.447-06:00  INFO 24816 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-27T18:38:43.450-06:00  INFO 24816 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3981 ms
-2025-02-27T18:38:43.653-06:00  INFO 24816 --- [restartedMain] c.e.c.repository.CachingRepository       : Creating cache_info table if not exists
-2025-02-27T18:38:43.659-06:00  INFO 24816 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-27T18:38:44.077-06:00  INFO 24816 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cachedb user=SA
-2025-02-27T18:38:44.091-06:00  INFO 24816 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-27T18:38:44.189-06:00  INFO 24816 --- [restartedMain] c.e.c.repository.CachingRepository       : Table creation is successful
-2025-02-27T18:38:44.464-06:00  INFO 24816 --- [restartedMain] c.exercise.caching.config.CacheConfig    : Initializing Cache Manager with maxElements=100, expiryMinutes=10
-2025-02-27T18:38:45.415-06:00  INFO 24816 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cachedb'
-2025-02-27T18:38:45.506-06:00  INFO 24816 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-02-27T18:38:45.551-06:00  INFO 24816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-27T18:38:45.571-06:00  INFO 24816 --- [restartedMain] c.exercise.caching.CachingApplication    : Started CachingApplication in 6.963 seconds (process running for 9.515)
-2025-02-27T18:41:30.729-06:00  INFO 24816 --- [http-nio-8080-exec-2] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
- Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+2025-02-28T03:30:27.847-06:00  WARN 24816 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=6h4m51s841ms).
+2025-02-28T09:34:02.351-06:00  WARN 24816 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=6h3m34s503ms).
+2025-02-28T11:25:27.816-06:00  WARN 24816 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=1h29m22s536ms).
+2025-02-28T11:47:49.180-06:00  WARN 24816 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=20m21s323ms).
+2025-02-28T12:07:52.515-06:00  WARN 24816 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=20m3s335ms).
+2025-02-28T12:29:46.801-06:00  WARN 24816 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=20m24s262ms).
+2025-02-28T12:31:48.664-06:00  WARN 24816 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=2m1s863ms).
+2025-02-28T12:53:52.289-06:00  WARN 24816 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=20m33s606ms).
+2025-02-28T13:05:36.387-06:00  WARN 24816 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=10m14s66ms).
+2025-02-28T13:14:15.237-06:00  INFO 24816 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-02-28T13:14:15.322-06:00  INFO 24816 --- [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-28T13:14:15.431-06:00  INFO 24816 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-28T13:14:15.467-06:00  WARN 24816 --- [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-02-28T13:14:15.489-06:00  INFO 24816 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-02-28T13:14:15.501-06:00  INFO 24816 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-02-28T13:14:16.460-06:00  INFO 24816 --- [restartedMain] c.exercise.caching.CachingApplication    : Starting Caching application
+2025-02-28T13:14:16.718-06:00  INFO 24816 --- [restartedMain] c.exercise.caching.CachingApplication    : Starting CachingApplication using Java 21.0.6 with PID 24816 (/Users/vaidy/Downloads/caching/target/classes started by vaidy in /Users/vaidy/Downloads/caching)
+2025-02-28T13:14:16.718-06:00  INFO 24816 --- [restartedMain] c.exercise.caching.CachingApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-28T13:14:17.740-06:00  INFO 24816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-28T13:14:17.751-06:00  INFO 24816 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-28T13:14:17.751-06:00  INFO 24816 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-02-28T13:14:17.781-06:00  INFO 24816 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-28T13:14:17.782-06:00  INFO 24816 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1025 ms
+2025-02-28T13:14:17.896-06:00  INFO 24816 --- [restartedMain] c.e.c.repository.CachingRepository       : Creating cache_info table if not exists
+2025-02-28T13:14:17.897-06:00  INFO 24816 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-02-28T13:14:17.900-06:00  INFO 24816 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn40: url=jdbc:h2:mem:cachedb user=SA
+2025-02-28T13:14:17.901-06:00  INFO 24816 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-02-28T13:14:17.904-06:00  INFO 24816 --- [restartedMain] c.e.c.repository.CachingRepository       : Table creation is successful
+2025-02-28T13:14:17.927-06:00  INFO 24816 --- [restartedMain] c.exercise.caching.config.CacheConfig    : Initializing Cache Manager with maxElements=100, expiryMinutes=10
+2025-02-28T13:14:18.214-06:00  INFO 24816 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cachedb'
+2025-02-28T13:14:18.236-06:00  INFO 24816 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-28T13:14:18.249-06:00  INFO 24816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-28T13:14:18.268-06:00  INFO 24816 --- [restartedMain] c.exercise.caching.CachingApplication    : Started CachingApplication in 1.788 seconds (process running for 5329.012)
+2025-02-28T13:14:18.279-06:00  INFO 24816 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-02-28T14:06:01.016-06:00  WARN 24816 --- [HikariPool-3 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=46m42s961ms).
+2025-02-28T14:21:41.486-06:00  WARN 24816 --- [HikariPool-3 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=13m40s386ms).
+2025-02-28T14:30:37.214-06:00  WARN 24816 --- [HikariPool-3 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=8m55s728ms).
+2025-02-28T14:46:31.985-06:00  WARN 24816 --- [HikariPool-3 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=15m54s771ms).
+2025-02-28T14:48:20.325-06:00  WARN 24816 --- [HikariPool-3 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1m48s340ms).
+2025-02-28T14:49:28.103-06:00  WARN 24816 --- [HikariPool-3 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1m7s778ms).
+2025-02-28T14:57:10.926-06:00  WARN 24816 --- [HikariPool-3 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=7m12s815ms).
+2025-02-28T15:01:10.297-06:00  INFO 24816 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-28T15:01:10.315-06:00  INFO 24816 --- [Thread-12] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-28T15:01:10.323-06:00  INFO 24816 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-28T15:01:10.338-06:00  WARN 24816 --- [Thread-12] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-02-28T15:01:10.343-06:00  INFO 24816 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-02-28T15:01:10.346-06:00  INFO 24816 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-02-28T15:01:10.607-06:00  INFO 24816 --- [restartedMain] c.exercise.caching.CachingApplication    : Starting Caching application
+2025-02-28T15:01:10.672-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Starting CachingApplication using Java 21.0.6 with PID 24816 (/Users/vaidy/Downloads/caching/target/classes started by vaidy in /Users/vaidy/Downloads/caching)
+2025-02-28T15:01:10.673-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-28T15:01:11.218-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-28T15:01:11.227-06:00  INFO 24816 --- [CachingService] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-28T15:01:11.227-06:00  INFO 24816 --- [CachingService] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-02-28T15:01:11.259-06:00  INFO 24816 --- [CachingService] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-28T15:01:11.259-06:00  INFO 24816 --- [CachingService] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 584 ms
+2025-02-28T15:01:11.306-06:00  INFO 24816 --- [CachingService] [restartedMain] c.e.c.repository.CachingRepository       : Creating cache_info table if not exists
+2025-02-28T15:01:11.306-06:00  INFO 24816 --- [CachingService] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-02-28T15:01:11.309-06:00  INFO 24816 --- [CachingService] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn50: url=jdbc:h2:mem:cachedb user=SA
+2025-02-28T15:01:11.309-06:00  INFO 24816 --- [CachingService] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-02-28T15:01:11.310-06:00  INFO 24816 --- [CachingService] [restartedMain] c.e.c.repository.CachingRepository       : Table creation is successful
+2025-02-28T15:01:11.338-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.config.CacheConfig    : Initializing Cache Manager with maxElements=100, expiryMinutes=10
+2025-02-28T15:01:11.630-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cachedb'
+2025-02-28T15:01:11.653-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-28T15:01:11.666-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-28T15:01:11.671-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Started CachingApplication in 1.033 seconds (process running for 6229.865)
+2025-02-28T15:23:00.721-06:00  INFO 24816 --- [CachingService] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-28T15:23:00.772-06:00  INFO 24816 --- [CachingService] [Thread-16] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-28T15:23:00.784-06:00  INFO 24816 --- [CachingService] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-28T15:23:00.799-06:00  WARN 24816 --- [CachingService] [Thread-16] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-02-28T15:23:00.802-06:00  INFO 24816 --- [CachingService] [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-02-28T15:23:00.806-06:00  INFO 24816 --- [CachingService] [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-02-28T15:23:01.017-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Starting Caching application
+2025-02-28T15:23:01.051-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Starting CachingApplication using Java 21.0.6 with PID 24816 (/Users/vaidy/Downloads/caching/target/classes started by vaidy in /Users/vaidy/Downloads/caching)
+2025-02-28T15:23:01.051-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-28T15:23:01.690-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-28T15:23:01.692-06:00  INFO 24816 --- [CachingService] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-28T15:23:01.692-06:00  INFO 24816 --- [CachingService] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-02-28T15:23:01.728-06:00  INFO 24816 --- [CachingService] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-28T15:23:01.728-06:00  INFO 24816 --- [CachingService] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 673 ms
+2025-02-28T15:23:01.787-06:00  WARN 24816 --- [CachingService] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheConfig': Unsatisfied dependency expressed through field 'cacheManager': No qualifying bean of type 'org.springframework.cache.caffeine.CaffeineCacheManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-02-28T15:23:01.787-06:00  INFO 24816 --- [CachingService] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-02-28T15:23:01.805-06:00  INFO 24816 --- [CachingService] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
 
-java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x060xf20x010x000x060xee0x030x030xe80x88J0x0a0x160x930x850xfa0x820x05:0xc00xc5gt0xfaU ]. HTTP method names must be tokens
-	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:409) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-02-28T15:23:01.911-06:00 ERROR 24816 --- [CachingService] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
-2025-02-27T18:41:30.729-06:00  INFO 24816 --- [http-nio-8080-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
- Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+***************************
+APPLICATION FAILED TO START
+***************************
 
-java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x070x120x010x000x070x0e0x030x03CF0x0e0xd9O]Oy0xde0xe30x010xff0xcf0x0d/0xbf0x1a0xff0x86#oD|0xa40xb80xd7f0x1a0xc4M0m ]. HTTP method names must be tokens
-	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:409) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Description:
 
-2025-02-27T18:45:40.016-06:00  INFO 24816 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-02-27T18:45:40.102-06:00  INFO 24816 --- [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-02-27T18:45:40.192-06:00  INFO 24816 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-02-27T18:45:40.263-06:00  WARN 24816 --- [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
-2025-02-27T18:45:40.271-06:00  INFO 24816 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-02-27T18:45:40.279-06:00  INFO 24816 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-02-27T18:45:41.166-06:00  INFO 24816 --- [restartedMain] c.exercise.caching.CachingApplication    : Starting Caching application
-2025-02-27T18:45:41.346-06:00  INFO 24816 --- [restartedMain] c.exercise.caching.CachingApplication    : Starting CachingApplication using Java 21.0.6 with PID 24816 (/Users/vaidy/Downloads/caching/target/classes started by vaidy in /Users/vaidy/Downloads/caching)
-2025-02-27T18:45:41.346-06:00  INFO 24816 --- [restartedMain] c.exercise.caching.CachingApplication    : No active profile set, falling back to 1 default profile: "default"
-2025-02-27T18:45:41.970-06:00  INFO 24816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-27T18:45:41.971-06:00  INFO 24816 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-27T18:45:41.972-06:00  INFO 24816 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-02-27T18:45:42.001-06:00  INFO 24816 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-27T18:45:42.001-06:00  INFO 24816 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 652 ms
-2025-02-27T18:45:42.096-06:00  INFO 24816 --- [restartedMain] c.e.c.repository.CachingRepository       : Creating cache_info table if not exists
-2025-02-27T18:45:42.098-06:00  INFO 24816 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2025-02-27T18:45:42.102-06:00  INFO 24816 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:cachedb user=SA
-2025-02-27T18:45:42.102-06:00  INFO 24816 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2025-02-27T18:45:42.104-06:00  INFO 24816 --- [restartedMain] c.e.c.repository.CachingRepository       : Table creation is successful
-2025-02-27T18:45:42.153-06:00  INFO 24816 --- [restartedMain] c.exercise.caching.config.CacheConfig    : Initializing Cache Manager with maxElements=100, expiryMinutes=10
-2025-02-27T18:45:42.606-06:00  INFO 24816 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cachedb'
-2025-02-27T18:45:42.631-06:00  INFO 24816 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-02-27T18:45:42.641-06:00  INFO 24816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-27T18:45:42.689-06:00  INFO 24816 --- [restartedMain] c.exercise.caching.CachingApplication    : Started CachingApplication in 1.379 seconds (process running for 426.621)
-2025-02-27T18:45:42.693-06:00  INFO 24816 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2025-02-27T18:46:15.235-06:00  INFO 24816 --- [http-nio-8080-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
- Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+Field cacheManager in com.exercise.caching.config.CacheConfig required a bean of type 'org.springframework.cache.caffeine.CaffeineCacheManager' that could not be found.
 
-java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x070x120x010x000x070x0e0x030x030xba0x8b0xe10xd5g0x840xc00xf7?k0xae0x8c0xbf0x0c0xb6+[0x960xc40xe5|0xb90x9d0x0ei0x980xcf0x8b0xe2B0xacE ]. HTTP method names must be tokens
-	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:409) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
 
-2025-02-27T18:46:15.235-06:00  INFO 24816 --- [http-nio-8080-exec-2] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
- Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
 
-java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x060xd20x010x000x060xce0x030x03K0x170xda8f0x190xa30xd50xc80x7f"0x910xf5m0x05B0xd80xd80xdc0xef0xad$0xdb0x80:TX|,eO0xcb ]. HTTP method names must be tokens
-	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:409) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Action:
 
-2025-02-27T18:50:05.027-06:00  INFO 24816 --- [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-27T18:50:05.071-06:00  INFO 24816 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-27T18:50:05.082-06:00  INFO 24816 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
-2025-02-27T18:50:05.272-06:00 ERROR 24816 --- [http-nio-8080-exec-5] c.e.c.exception.GlobalExceptionHandler   : Unexpected error: No static resource swagger-ui.html.
+Consider defining a bean of type 'org.springframework.cache.caffeine.CaffeineCacheManager' in your configuration.
 
-org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui.html.
-	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.3.jar:6.2.3]
-	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.3.jar:6.2.3]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.3.jar:6.2.3]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.3.jar:6.2.3]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.3.jar:6.2.3]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.3.jar:6.2.3]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.36.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.3.jar:6.2.3]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.36.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.3.jar:6.2.3]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.3.jar:6.2.3]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.3.jar:6.2.3]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+2025-02-28T15:23:43.664-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Starting Caching application
+2025-02-28T15:23:43.704-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Starting CachingApplication using Java 21.0.6 with PID 24816 (/Users/vaidy/Downloads/caching/target/classes started by vaidy in /Users/vaidy/Downloads/caching)
+2025-02-28T15:23:43.704-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-28T15:23:43.974-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-28T15:23:43.976-06:00  INFO 24816 --- [CachingService] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-28T15:23:43.976-06:00  INFO 24816 --- [CachingService] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-02-28T15:23:43.994-06:00  INFO 24816 --- [CachingService] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-02-28T15:23:43.994-06:00  INFO 24816 --- [CachingService] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 288 ms
+2025-02-28T15:23:44.008-06:00  WARN 24816 --- [CachingService] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheConfig': Unsatisfied dependency expressed through field 'caffeineCacheManager': No qualifying bean of type 'org.springframework.cache.caffeine.CaffeineCacheManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-02-28T15:23:44.008-06:00  INFO 24816 --- [CachingService] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-02-28T15:23:44.012-06:00  INFO 24816 --- [CachingService] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
 
-2025-02-27T18:50:05.517-06:00  WARN 24816 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui.html.]
-2025-02-27T18:50:05.734-06:00 ERROR 24816 --- [http-nio-8080-exec-6] c.e.c.exception.GlobalExceptionHandler   : Unexpected error: No static resource favicon.ico.
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-02-28T15:23:44.015-06:00 ERROR 24816 --- [CachingService] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
-org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
-	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.3.jar:6.2.3]
-	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.3.jar:6.2.3]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.3.jar:6.2.3]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.3.jar:6.2.3]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.3.jar:6.2.3]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.3.jar:6.2.3]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.36.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.3.jar:6.2.3]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.36.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.3.jar:6.2.3]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.3.jar:6.2.3]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.3.jar:6.2.3]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+***************************
+APPLICATION FAILED TO START
+***************************
 
-2025-02-27T18:50:05.747-06:00  WARN 24816 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+Description:
+
+Field caffeineCacheManager in com.exercise.caching.config.CacheConfig required a bean of type 'org.springframework.cache.caffeine.CaffeineCacheManager' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cache.caffeine.CaffeineCacheManager' in your configuration.
+
+2025-02-28T15:25:08.293-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Starting Caching application
+2025-02-28T15:25:08.410-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Starting CachingApplication using Java 21.0.6 with PID 24816 (/Users/vaidy/Downloads/caching/target/classes started by vaidy in /Users/vaidy/Downloads/caching)
+2025-02-28T15:25:08.410-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-28T15:25:08.781-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-28T15:25:08.783-06:00  INFO 24816 --- [CachingService] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-28T15:25:08.783-06:00  INFO 24816 --- [CachingService] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-02-28T15:25:08.797-06:00  INFO 24816 --- [CachingService] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-02-28T15:25:08.798-06:00  INFO 24816 --- [CachingService] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 377 ms
+2025-02-28T15:25:08.867-06:00  INFO 24816 --- [CachingService] [restartedMain] c.e.c.repository.CachingRepository       : Creating cache_info table if not exists
+2025-02-28T15:25:08.868-06:00  INFO 24816 --- [CachingService] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-02-28T15:25:08.878-06:00  INFO 24816 --- [CachingService] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn60: url=jdbc:h2:mem:cachedb user=SA
+2025-02-28T15:25:08.878-06:00  INFO 24816 --- [CachingService] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-02-28T15:25:08.880-06:00  INFO 24816 --- [CachingService] [restartedMain] c.e.c.repository.CachingRepository       : Table creation is successful
+2025-02-28T15:25:08.917-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.config.CacheConfig    : Initializing Cache Manager with maxElements=100, expiryMinutes=10
+2025-02-28T15:25:09.218-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cachedb'
+2025-02-28T15:25:09.253-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-28T15:25:09.278-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-28T15:25:09.293-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Started CachingApplication in 0.961 seconds (process running for 7667.444)
+2025-02-28T15:25:09.296-06:00  INFO 24816 --- [CachingService] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-02-28T17:26:27.969-06:00  WARN 24816 --- [CachingService] [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=1h19m18s603ms).
+2025-02-28T17:27:51.595-06:00  WARN 24816 --- [CachingService] [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=53s614ms).
+2025-02-28T17:32:36.393-06:00  WARN 24816 --- [CachingService] [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=4m44s798ms).
+2025-02-28T17:33:05.892-06:00  WARN 24816 --- [CachingService] [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Retrograde clock change detected (housekeeper delta=29s499ms), soft-evicting connections from pool.
+2025-02-28T17:41:55.471-06:00  INFO 24816 --- [CachingService] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-28T17:41:55.607-06:00  INFO 24816 --- [CachingService] [Thread-20] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-28T17:41:55.622-06:00  INFO 24816 --- [CachingService] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-28T17:41:55.645-06:00  WARN 24816 --- [CachingService] [Thread-20] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-02-28T17:41:55.653-06:00  INFO 24816 --- [CachingService] [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-02-28T17:41:55.656-06:00  INFO 24816 --- [CachingService] [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-02-28T17:41:56.295-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Starting Caching application
+2025-02-28T17:41:56.383-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Starting CachingApplication using Java 21.0.6 with PID 24816 (/Users/vaidy/Downloads/caching/target/classes started by vaidy in /Users/vaidy/Downloads/caching)
+2025-02-28T17:41:56.385-06:00 DEBUG 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-02-28T17:41:56.385-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-28T17:41:57.495-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-28T17:41:57.498-06:00  INFO 24816 --- [CachingService] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-28T17:41:57.498-06:00  INFO 24816 --- [CachingService] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-02-28T17:41:57.524-06:00  INFO 24816 --- [CachingService] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-02-28T17:41:57.524-06:00  INFO 24816 --- [CachingService] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1135 ms
+2025-02-28T17:41:57.641-06:00  INFO 24816 --- [CachingService] [restartedMain] c.e.c.repository.CachingRepository       : Creating cache_info table if not exists
+2025-02-28T17:41:57.643-06:00  INFO 24816 --- [CachingService] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-02-28T17:41:57.654-06:00  INFO 24816 --- [CachingService] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn90: url=jdbc:h2:mem:cachedb user=SA
+2025-02-28T17:41:57.656-06:00  INFO 24816 --- [CachingService] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-02-28T17:41:57.658-06:00  INFO 24816 --- [CachingService] [restartedMain] c.e.c.repository.CachingRepository       : Table creation is successful
+2025-02-28T17:41:57.751-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.config.CacheConfig    : Initializing Cache Manager with maxElements=100, expiryMinutes=10
+2025-02-28T17:41:58.213-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cachedb'
+2025-02-28T17:41:58.245-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-28T17:41:58.262-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-28T17:41:58.290-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Started CachingApplication in 1.952 seconds (process running for 10857.648)
+2025-02-28T17:41:58.292-06:00  INFO 24816 --- [CachingService] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-02-28T17:42:22.086-06:00  INFO 24816 --- [CachingService] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 19 class path changes (0 additions, 0 deletions, 19 modifications)
+2025-02-28T17:42:22.109-06:00  INFO 24816 --- [CachingService] [Thread-30] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-28T17:42:22.117-06:00  INFO 24816 --- [CachingService] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-28T17:42:22.129-06:00  WARN 24816 --- [CachingService] [Thread-30] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-02-28T17:42:22.132-06:00  INFO 24816 --- [CachingService] [Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2025-02-28T17:42:22.136-06:00  INFO 24816 --- [CachingService] [Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2025-02-28T17:42:22.479-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Starting Caching application
+2025-02-28T17:42:22.658-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Starting CachingApplication using Java 21.0.6 with PID 24816 (/Users/vaidy/Downloads/caching/target/classes started by vaidy in /Users/vaidy/Downloads/caching)
+2025-02-28T17:42:22.661-06:00 DEBUG 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-02-28T17:42:22.662-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-28T17:42:24.200-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-28T17:42:24.201-06:00  INFO 24816 --- [CachingService] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-28T17:42:24.201-06:00  INFO 24816 --- [CachingService] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-02-28T17:42:24.217-06:00  INFO 24816 --- [CachingService] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-02-28T17:42:24.217-06:00  INFO 24816 --- [CachingService] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1508 ms
+2025-02-28T17:42:24.530-06:00  INFO 24816 --- [CachingService] [restartedMain] c.e.c.repository.CachingRepository       : Creating cache_info table if not exists
+2025-02-28T17:42:24.530-06:00  INFO 24816 --- [CachingService] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2025-02-28T17:42:24.536-06:00  INFO 24816 --- [CachingService] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection conn100: url=jdbc:h2:mem:cachedb user=SA
+2025-02-28T17:42:24.539-06:00  INFO 24816 --- [CachingService] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2025-02-28T17:42:24.540-06:00  INFO 24816 --- [CachingService] [restartedMain] c.e.c.repository.CachingRepository       : Table creation is successful
+2025-02-28T17:42:24.612-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.config.CacheConfig    : Initializing Cache Manager with maxElements=100, expiryMinutes=10
+2025-02-28T17:42:25.480-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cachedb'
+2025-02-28T17:42:25.626-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-28T17:42:25.653-06:00  INFO 24816 --- [CachingService] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-28T17:42:25.667-06:00  INFO 24816 --- [CachingService] [restartedMain] c.exercise.caching.CachingApplication    : Started CachingApplication in 3.157 seconds (process running for 10885.016)
+2025-02-28T17:42:25.669-06:00  INFO 24816 --- [CachingService] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-02-28T17:42:43.784-06:00  INFO 24816 --- [CachingService] [RMI TCP Connection(231)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-02-28T17:42:43.787-06:00  INFO 24816 --- [CachingService] [RMI TCP Connection(231)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-28T17:42:43.792-06:00  INFO 24816 --- [CachingService] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-28T17:42:43.804-06:00  WARN 24816 --- [CachingService] [RMI TCP Connection(231)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-02-28T17:42:43.805-06:00  INFO 24816 --- [CachingService] [RMI TCP Connection(231)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2025-02-28T17:42:43.806-06:00  INFO 24816 --- [CachingService] [RMI TCP Connection(231)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.

@@ -52,11 +52,14 @@ public class CachingController {
     	    @ApiResponse(responseCode = "400", 
     	                description = "Invalid input",
     	                content = @Content(schema = @Schema(implementation = ErrorResponse.class))),
+    	    @ApiResponse(responseCode = "401", description = "Unauthorized",
+    	    			content = @Content(schema = @Schema(implementation = ErrorResponse.class))),
     	    @ApiResponse(responseCode = "500", 
     	                description = "Internal server error",
     	                content = @Content(schema = @Schema(implementation = ErrorResponse.class)))
     	})
-    public ResponseEntity<?> add(@Valid @RequestBody CachedEntity entity) {
+    public ResponseEntity<?> add(@Parameter(description = "Entity to be added", required = true)
+    							 @Valid @RequestBody CachedEntity entity) {
         logger.debug("REST API call to add entity: {}", entity);
         try {
            
@@ -170,13 +173,7 @@ public class CachingController {
         }
     }
     private ResponseEntity<ErrorResponse> buildErrorResponse(HttpStatus status, String message) {
-        ErrorResponse errorResponse = ErrorResponse.builder()
-                .timestamp(LocalDateTime.now())
-                .status(status.value())
-                .error(status.getReasonPhrase())
-                .message(message)
-                .build();
-
+        ErrorResponse errorResponse =  new ErrorResponse(status.value(), message);
         return new ResponseEntity<>(errorResponse, status);
     }
 }

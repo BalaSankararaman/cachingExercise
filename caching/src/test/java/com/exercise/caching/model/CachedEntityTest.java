@@ -24,7 +24,7 @@ public class CachedEntityTest {
     @Test
     void testConstructor() {
         LocalDateTime now = LocalDateTime.now();
-        CachedEntity entity = new CachedEntity("test-id", "test-data", now, true);
+        CachedEntity entity = new CachedEntity("test-id", "test-data", now);
 
         assertEquals("test-id", entity.getId());
         assertEquals("test-data", entity.getData());

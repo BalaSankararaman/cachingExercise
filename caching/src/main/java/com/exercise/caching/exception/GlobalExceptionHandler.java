@@ -1,76 +1,102 @@
 package com.exercise.caching.exception;
 
-import com.exercise.caching.model.ErrorResponse;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.context.request.WebRequest;
 
-import java.time.LocalDateTime;
+import com.exercise.caching.model.ErrorResponse;
+
+import jakarta.validation.ConstraintViolationException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
     private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler(EntityNotFoundException.class)
-    public ResponseEntity<ErrorResponse> handleEntityNotFoundException(
-            EntityNotFoundException ex, WebRequest request) {
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<ErrorResponse> handleEntityNotFound(EntityNotFoundException ex) {
         logger.error("Entity not found: {}", ex.getMessage());
-        ErrorResponse error = buildErrorResponse(
-            HttpStatus.NOT_FOUND, 
-            ex.getMessage(), 
-            request.getDescription(false)
+        ErrorResponse error = new ErrorResponse(
+            HttpStatus.NOT_FOUND.value(),
+            ex.getMessage()
         );
         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(CachingException.class)
+    @ResponseStatus(HttpStatus.SERVICE_UNAVAILABLE)
+    public ResponseEntity<ErrorResponse> handleCaching(CachingException ex) {
+        logger.error("Cache full: {}", ex.getMessage());
+        ErrorResponse error = new ErrorResponse(
+            HttpStatus.SERVICE_UNAVAILABLE.value(),
+            ex.getMessage()
+        );
+        return new ResponseEntity<>(error, HttpStatus.SERVICE_UNAVAILABLE);
+    }
+
+    @ExceptionHandler(ValidationException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseEntity<ErrorResponse> handleValidation(ValidationException ex) {
+        logger.error("Validation error: {}", ex.getMessage());
+        ErrorResponse error = new ErrorResponse(
+            HttpStatus.BAD_REQUEST.value(),
+            ex.getMessage()
+        );
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    }
+
     @ExceptionHandler(DBException.class)
-    public ResponseEntity<ErrorResponse> handleDatabaseException(
-    		DBException ex, WebRequest request) {
-        logger.error("Database error: {}", ex.getMessage(), ex);
-        ErrorResponse error = buildErrorResponse(
-            HttpStatus.INTERNAL_SERVER_ERROR,
-            "Database operation failed",
-            request.getDescription(false)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ResponseEntity<ErrorResponse> handleDatabaseOperation(DBException ex) {
+        logger.error("Database operation error: {}", ex.getMessage(), ex);
+        ErrorResponse error = new ErrorResponse(
+            HttpStatus.INTERNAL_SERVER_ERROR.value(),
+            "An internal error occurred while processing your request"
         );
         return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(CachingException.class)
-    public ResponseEntity<ErrorResponse> handleCacheException(
-    		CachingException ex, WebRequest request) {
-        logger.error("Cache error: {}", ex.getMessage(), ex);
-        ErrorResponse error = buildErrorResponse(
-            HttpStatus.INTERNAL_SERVER_ERROR,
-            ex.getMessage(),
-            request.getDescription(false)
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseEntity<Map<String, String>> handleValidationExceptions(
+            MethodArgumentNotValidException ex) {
+        Map<String, String> errors = new HashMap<>();
+        ex.getBindingResult().getFieldErrors().forEach(error ->
+            errors.put(error.getField(), error.getDefaultMessage())
         );
-        return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
+        logger.error("Validation errors: {}", errors);
+        return ResponseEntity.badRequest().body(errors);
+    }
+
+    @ExceptionHandler(ConstraintViolationException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseEntity<ErrorResponse> handleConstraintViolation(
+            ConstraintViolationException ex) {
+        logger.error("Constraint violation: {}", ex.getMessage());
+        ErrorResponse error = new ErrorResponse(
+            HttpStatus.BAD_REQUEST.value(),
+            ex.getMessage()
+        );
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<ErrorResponse> handleGlobalException(
-            Exception ex, WebRequest request) {
-        logger.error("Unexpected error: {}", ex.getMessage(), ex);
-        ErrorResponse error = buildErrorResponse(
-            HttpStatus.INTERNAL_SERVER_ERROR,
-            "An unexpected error occurred",
-            request.getDescription(false)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ResponseEntity<ErrorResponse> handleAllUncaughtException(Exception ex) {
+        logger.error("Unexpected error occurred", ex);
+        ErrorResponse error = new ErrorResponse(
+            HttpStatus.INTERNAL_SERVER_ERROR.value(),
+            "An unexpected error occurred"
         );
         return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
-    }
-
-    private ErrorResponse buildErrorResponse(
-            HttpStatus status, String message, String path) {
-        return ErrorResponse.builder()
-            .timestamp(LocalDateTime.now())
-            .status(status.value())
-            .error(status.getReasonPhrase())
-            .message(message)
-            .path(path)
-            .build();
     }
 }

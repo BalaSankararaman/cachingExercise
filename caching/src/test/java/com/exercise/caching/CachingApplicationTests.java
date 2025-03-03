@@ -20,7 +20,7 @@ class CachingApplicationTests {
     private ApplicationContext applicationContext;
 
     @Autowired
-    private CaffeineCacheManager cacheManager;
+    private CaffeineCacheManager caffeineCacheManager;
 
     @Test
     void contextLoads() {
@@ -29,8 +29,8 @@ class CachingApplicationTests {
 
     @Test
     void cacheManagerIsConfigured() {
-        assertNotNull(cacheManager);
-        assertTrue(cacheManager.getCacheNames().contains("cacheEntity"));
+        assertNotNull(caffeineCacheManager);
+        assertTrue(caffeineCacheManager.getCacheNames().contains("cacheEntity"));
     }
 
     @Test
@@ -47,8 +47,8 @@ class CachingApplicationTests {
 
     @Test
     void cacheIsInitiallyEmpty() {
-        assertNotNull(cacheManager.getCache("cacheEntity"));
-        assertNull(cacheManager.getCache("cacheEntity").get("id1"));
+        assertNotNull(caffeineCacheManager.getCache("cacheEntity"));
+        assertNull(caffeineCacheManager.getCache("cacheEntity").get("id1"));
     }
 }
 

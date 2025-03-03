@@ -12,16 +12,21 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
+import org.springframework.validation.annotation.Validated;
 
 import com.exercise.caching.exception.CachingException;
 import com.exercise.caching.exception.EntityNotFoundException;
+import com.exercise.caching.exception.ValidationException;
 import com.exercise.caching.model.CachedEntity;
 import com.exercise.caching.repository.CachingRepository;
 
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
+
 
 @Service
 @CacheConfig(cacheNames = {"cacheEntity"})  
+@Validated
 public class CachingService {
 
 	    private static final Logger logger = LoggerFactory.getLogger(CachingService.class);
@@ -52,7 +57,7 @@ public class CachingService {
 	            return entity;
 	        } catch (IllegalArgumentException e) {
 	            logger.error("Invalid entity provided: {}", e.getMessage());
-	            throw e;
+	            throw new ValidationException("Invalid input");
 	        } catch (DataAccessException e) {
 	            logger.error("Database error while adding entity: {}", e.getMessage());
 	            throw new CachingException("Failed to add entity to database", e);
@@ -71,7 +76,7 @@ public class CachingService {
 	     */
 	    @Cacheable(key = "#id")
 	    @Transactional(readOnly = true)
-	    public CachedEntity get(String id) {
+	    public CachedEntity get(@NotBlank String id) {
 	        try {
 	            validateId(id);
 	            logger.debug("Attempting to retrieve entity with ID: {}", id);
@@ -106,7 +111,7 @@ public class CachingService {
 	     */
 	    @CacheEvict(key = "#id")
 	    @Transactional
-	    public void remove(String id) {
+	    public void remove(@NotBlank String id) {
 	        try {
 	            validateId(id);
 	            logger.debug("Attempting to remove entity with ID: {}", id);

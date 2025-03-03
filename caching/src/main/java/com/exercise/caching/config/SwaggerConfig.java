@@ -1,13 +1,10 @@
 package com.exercise.caching.config;
 
-import java.util.Arrays;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
-import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
@@ -29,19 +26,14 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
-                .components(new Components()
-                        .addSecuritySchemes("bearer-jwt", 
-                            new SecurityScheme()
-                                .type(SecurityScheme.Type.HTTP)
-                                .scheme("bearer")
-                                .bearerFormat("JWT")
-                                .in(SecurityScheme.In.HEADER)
-                                .name("Authorization"))
-                )
-                .info(getApiInfo())
-                .addSecurityItem(
-                        new SecurityRequirement()
-                                .addList("bearer-jwt", Arrays.asList("read", "write")));
+        		.addSecurityItem(new SecurityRequirement().addList("basicAuth"))
+                .components(new io.swagger.v3.oas.models.Components()
+                        .addSecuritySchemes("basicAuth",
+                                new SecurityScheme()
+                                        .type(SecurityScheme.Type.HTTP)
+                                        .scheme("basic")))
+                .info(getApiInfo());
+                
                 
     }
 
